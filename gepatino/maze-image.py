@@ -3,12 +3,16 @@ from PIL import Image, ImageDraw
 
 BG_COLOR = (0, 255, 0)
 FG_COLOR = (255, 255, 255)
+BG_COLOR = '#A66000'
+FG_COLOR = '#A66B00'
+
 ZOOM = 2
 
-height = 500
-width = 500
-m = Maze(width, height)
+width = 1366 / 2
+height = 768 / 2
 
+
+m = Maze(width, height)
 im = Image.new('RGB', (m.width, m.height))
 
 draw = ImageDraw.Draw(im)
@@ -24,7 +28,7 @@ if ZOOM > 1:
     new_size = (m.width * ZOOM, m.height * ZOOM)
     im = im.resize(new_size)
 
-im.save('test.png')
+im.save('wallpaper.png')
 
 
 
